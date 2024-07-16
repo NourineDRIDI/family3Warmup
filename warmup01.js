@@ -51,15 +51,14 @@ let reverseStr = function (str){
 return result
 }
 
-/**
 // * 7 Write a function called laugh() that takes one parameter,
 // * num that represents the number of "ha"s to return.
 // * laugh(6); => "hahahahahaha"
- *
- * @function laugh
- * @param {number} n
- * @return {string}
- */
+//  *
+//  * @function laugh
+//  * @param {number} n
+//  * @return {string}
+//  */
 const laugh= function (num){
   result =""
   for (let i=0; i<num ; i++){
@@ -79,11 +78,12 @@ const laugh= function (num){
 
 let reverseArray = (array ) => {
 	result=[]
-	for(let i = length.array-1 ; i>=0 ; i--){
+	for(let i=length.array-1 ; i>=0 ; i--){
 		result.push(array[i])
 	}
 	return result
 }
+// be careful from this 8 use for off better
 
 /**
  * 10-Given an array of integers and an integer n.
@@ -98,8 +98,13 @@ let reverseArray = (array ) => {
  * @return {Array}
  */{}
 let findAll = (arr,n) => {
-	let indexes =[]
-    for gitlet 
+	let indexes=[]
+	for (let i = 0 ; i < arr.length ; i++) {
+        if (arr[i] === n) {
+            indexes.push(i)
+        }
+    }
+    return indexes;
 }
 
 
@@ -113,7 +118,9 @@ let findAll = (arr,n) => {
 let reverseWord=(string) => {
 	let result =[]
 	let word=""
+ for (i=0 ; i<=string.length ; i++){
 
+ }
 
 
 }
