@@ -10,7 +10,18 @@ let countring = (number) => {
     for (let i = 1; i <= number; i++) {
         result.push(i)
     }
-    return result.join(",")
+    return result.join(", ")
+}
+
+let countring2 = (number) => {
+    let result = ""
+    for (let i = 1; i <= number; i++) {
+        if (i===number){
+            return (result+=1)
+        }
+        result += i+", "
+    }
+    return result
 }
 
 
@@ -20,10 +31,7 @@ let countring = (number) => {
  * @return {any}
  */
 
-let midElement = function (array) {
-    let middleIndex = Math.floor(array.length / 2)
-    return array[middleIndex]
-}
+let midElement = (array) => array.at(Math.floor(array.length/2))
 
 /**
  * 4 - write a function called (sameLength) that takes array of strings and returns an array of the strings that have the same length
@@ -68,16 +76,32 @@ let findAll = function (array, n) {
 //
 //
 // Note : you can`t use any built-in functions .
-
 let reverseWord = (string) => {
-
+    let result = []
+    let word = ""
+    let reversedresult = ""
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === " ") {
+            result.push(word)
+            word = ""
+        } else {
+            word += string[i]
+        }
+    }
+    result.push(word)
+    for (let i = result.length - 1; i >= 0; i--) {
+        reversedresult += result[i]
+        if (i !== 0) reversedresult += " "
+    }
+    return reversedresult
 }
+
 
 
 //7.Write a function called sumOfFirstAndLast that 
 //takes a number as a parameter and returns the sum of the first and last digits. Please do this without turning the number into a string.
 
-function sumOfFirstAndLast(number) {
+function sumOfFirstAndLast(number) { 
     let first = number
     let last = number %10
     while (first >= 10) {
@@ -113,12 +137,8 @@ let objKey = (object) => {
  * @return number
  */
 let objLength = (obj) => { 
-    let result = 0
-    for (let key in obj){
-        obj.key(obj)
-        result++
-    }
-    return result
+   
+    return object.keys(obj).length
 }
 
 
