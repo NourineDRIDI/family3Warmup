@@ -43,15 +43,14 @@ let objSort=(array)=>{
 * 
  */
 let countUniqueElements=(arr)=> {
-    let uniqueElements = {}
-    for (let i = 0; i < arr.length; i++) {
-        let element = arr[i]
-        uniqueElements[element] = true
-    }
+    for (i=0;i<arr.length;i++){
+        if (arr[i]===arr[i+1]){
+            i++
 
-    return Object.keys(uniqueElements).length
-
+        }
+    }    
 }
+
 /**
  * Title: Sum of Array Pairs
  * 
@@ -87,14 +86,12 @@ let countUniqueElements=(arr)=> {
 
 let findPairs=(arr, target)=> {
     let result = []
-    
     for (let i = 0; i < arr.length; i++) {
-
-        if () {
-         
-        } else 
-          
-        
+      for (let j = i + 1; j < arr.length; j++) {
+        if (arr[i]+arr[j]===target) {
+          result.push([arr[i], arr[j]])
+        }
+      }
     }
 
     return result
