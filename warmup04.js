@@ -7,18 +7,14 @@
  // "0 is even"
 
  function iterateAndLog(n) {
-  if (n < 0) {
-    return -1
-  }
-  
-  if (n % 2 === 0) {
-    return n +" is even"
-  } else {
-    return n+" is odd"
-  }
-  
-}
+  n=n-1
+  if (n===0) return
+  if (n % 2 === 0) {console.log(`${n} is even`)}
+   else { console.log(`${n} is odd`)}
+  return iterateAndLog(n-1)
+ }
 
+let iterateAndLog2=(n)=>
 
  // RECURSIVELY
  //2- Write a JavaScript program to get the first n Fibonacci numbers
@@ -44,11 +40,10 @@ function fib(n) {
 
 function sumOfFirstAndLast(number) {
   let lastDig = number % 10
-
-  while (number >= 10) {
+  let firstDig = number
+  while (firstDig >= 10) {
     number = Math.floor(number / 10)
   }
-  let firstDig = number
   return firstDig + lastDig
 }
 
